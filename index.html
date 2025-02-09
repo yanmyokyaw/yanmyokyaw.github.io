@@ -1,1 +1,86 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body{
+                margin: 0px;
+            }
+
+            header{
+                color: aqua;
+                background-color: blanchedalmond;
+                text-align: center;
+                /* padding: 50px 0px 50px 0px; */
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            section::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            nav{
+                float: left;
+                width: 30%;
+                height: 510px;
+                background-color: lightblue;
+                padding: 20px;
+            }
+
+            article{
+                width: 70%;
+                height: 510px;
+                padding: 20px;
+                float: left;
+            }
+
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            footer{
+                color: white;
+                background-color: gray;
+                padding: 20px;
+                text-align: center;
+            }
+
+            @media (max-width: 600px) {
+                nav, article {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Cities</h2>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">Yangon</a></li>
+                    <li><a href="#">Mandalay</a></li>
+                    <li><a href="#">Monywa</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>Yangon</h1>
+                <p>Yangon is the capital city of Myanmar. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                <p>Standing on the River Thames, Yangon has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+            </article>
+        </section>
+        <footer>
+            <h5>Footer</h5>
+        </footer>
+    </body>
+</html>
